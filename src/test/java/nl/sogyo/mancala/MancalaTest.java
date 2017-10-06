@@ -103,9 +103,55 @@ public class MancalaTest {
         box.playBox(6);
         Assert.assertEquals(0, box.getStoneAmountNextBox(13));
     }
+
+    @Test
+    public void canPlayersOnlyPlayOwnBoxes(){
+        RegularBox box = new RegularBox(4,14);
+        box.playBox(8);
+        Assert.assertEquals(4, box.getStoneAmountNextBox(7));
+    }
+
+    @Test
+    public void switchTurnsIfPlayerHasPlayed(){
+        RegularBox box = new RegularBox(4, 14);
+        box.playBox(4);
+        box.playBox(8);
+        Assert.assertEquals(0, box.getStoneAmountNextBox(7));
+    }
+
+    @Test
+    public void dontSwitchPlayerIfMoveWasInvalid(){
+        RegularBox box = new RegularBox(4, 14);
+        box.playBox(8);
+        box.playBox(7);
+        box.playBox(6);
+        Assert.assertEquals(5, box.getStoneAmountNextBox(7));
+    }
+
+    @Test
+    public void dontSwitchPlayerIfMoveEndedAtKalaha(){
+        RegularBox box = new RegularBox(4, 14);
+        box.playBox(3);
+        box.playBox(4);
+        Assert.assertEquals(2, box.getStoneAmountNextBox(6));
+    }
+
+    @Test
+    public void captureStonesOtherPlayer(){
+        RegularBox box = new RegularBox(4, 14);
+        box.playBox(6);
+        box.playBox(13);
+        box.playBox(1);
+        Assert.assertEquals(7,box.getStoneAmountNextBox(6));
+    }
+
+
+
     /*
      * Next tests:
-     * -
-     * - make board of 12 (10, 8, 6, 4)
+     * - hit other player
+     * - hit other player, but not if his box is empty
+     * - check-end game
+     * - (make board of 12 (10, 8, 6, 4))
      */
 }

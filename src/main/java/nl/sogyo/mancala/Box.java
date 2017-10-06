@@ -6,7 +6,6 @@ public abstract class Box {
     Player player;
 
     // methods
-
     public void moveStones(int stonesToDistribute){
         if(this instanceof Kalaha && !this.player.getIsActivePlayer()) { // if player!=opponent
             nextBox.moveStones(stonesToDistribute);
@@ -16,6 +15,13 @@ public abstract class Box {
             stonesToDistribute--;
             if (stonesToDistribute > 0) {
                 nextBox.moveStones(stonesToDistribute);
+            }
+            else if(this instanceof Kalaha && this.player.getIsActivePlayer()){
+                this.player.changePlayer();
+            }
+            else if(this.player.getIsActivePlayer() && this.getStoneAmount()==1){
+                ((RegularBox) this).captureStones();
+                // move stones to kalaha active player
             }
         }
     }
@@ -34,5 +40,9 @@ public abstract class Box {
         else {
             return nextBox.getStoneAmountNextBox(--numberOfBoxesAway);
         }
+    }
+
+    public void addStones(int stonesToAdd) {
+        stones = stones + stonesToAdd;
     }
 }

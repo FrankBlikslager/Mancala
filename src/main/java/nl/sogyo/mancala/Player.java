@@ -18,9 +18,16 @@ public class Player {
 
     // methods
     public Player changePlayer(){
-        isActivePlayer = false;
-        opponent.isActivePlayer = true;
-        return opponent;
+        if(isActivePlayer) {
+            isActivePlayer = false;
+            opponent.isActivePlayer = true;
+            return opponent;
+        }
+        else{
+            isActivePlayer = true;
+            opponent.isActivePlayer = false;
+            return this;
+        }
     }
 
     public boolean getIsActivePlayer() {
@@ -33,5 +40,13 @@ public class Player {
 
     public void setFirstBox(RegularBox firstBox) {
         this.firstBox = firstBox;
+    }
+
+    public Kalaha getKalaha() {
+        return kalaha;
+    }
+
+    public void setKalaha(Kalaha kalaha) {
+        this.kalaha = kalaha;
     }
 }

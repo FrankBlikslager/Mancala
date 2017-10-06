@@ -11,7 +11,7 @@ public class RegularBox extends Box{
         }
     }
     public RegularBox(int amountOfStones, int amountOfBoxes){
-        Player player = new Player(this);
+        this.player = new Player(this);
         stones = amountOfStones;
         int boxesLeftToInitialize = amountOfBoxes-1;
         if(boxesLeftToInitialize>0) {
@@ -48,13 +48,30 @@ public class RegularBox extends Box{
 
     public void playBox(int boxNumber) {
         int boxesToMove = boxNumber-1;
-        if (boxesToMove==0){
+        if (boxesToMove==0 && this.player.getIsActivePlayer()){
             this.moveStones();
+            this.player.changePlayer();
+        }
+        else if(boxesToMove==0 && !this.player.getIsActivePlayer()){
+            // do nothing
         }
         else {
-            if((""+nextBox.getClass()).equals("class nl.sogyo.mancala.RegularBox")) {
+            if(nextBox instanceof RegularBox) {
                 ((RegularBox) nextBox).playBox(boxesToMove);
             }
+            else { // box is Kalaha
+                if(boxesToMove!=1) {
+                    boxesToMove--;
+                    ((RegularBox) nextBox.nextBox).playBox(boxesToMove);
+                }
+            }
         }
+    }
+
+    public void captureStones() {
+        int stonesToKalaha = stones;
+        stones = 0;
+        player.getKalaha().addStones(stonesToKalaha);
+
     }
 }
