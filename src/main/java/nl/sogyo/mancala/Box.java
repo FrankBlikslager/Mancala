@@ -34,7 +34,9 @@ public abstract class Box {
         return nextBox.getStoneAmount();
     }
     public int getStoneAmountNextBox(int numberOfBoxesAway) {
-        if(numberOfBoxesAway == 1) {
+        if (numberOfBoxesAway == 0)
+            return getStoneAmount();
+        else if(numberOfBoxesAway == 1) {
             return nextBox.getStoneAmount();
         }
         else {

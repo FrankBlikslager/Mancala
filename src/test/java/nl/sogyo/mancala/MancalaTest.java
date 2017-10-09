@@ -15,7 +15,7 @@ public class MancalaTest {
 
     @Test
     public void testMovedStoneToNextBox() {
-        RegularBox box = new RegularBox(2);
+        RegularBox box = new RegularBox(1,2);
         int startingStonesNextBox = box.getStoneAmountNextBox();
 
         box.moveStones();
@@ -52,11 +52,11 @@ public class MancalaTest {
 
     @Test
     public void checkBeginningBoxIfLoopIsClosed(){
-        RegularBox box = new RegularBox(4,4);
+        RegularBox box = new RegularBox(5,4);
 
         box.moveStones();
 
-        Assert.assertEquals(1, box.getStoneAmount());
+        Assert.assertEquals(7, box.getStoneAmountNextBox());
     }
 
     @Test
@@ -145,13 +145,87 @@ public class MancalaTest {
         Assert.assertEquals(7,box.getStoneAmountNextBox(6));
     }
 
+    @Test
+    public void captureStonesOtherPlayerCheckIfOwnBoxIsEmpty(){
+        RegularBox box = new RegularBox(4, 14);
+        box.playBox(6);
+        box.playBox(13);
+        box.playBox(1);
+        Assert.assertEquals(0,box.getStoneAmount());
+    }
 
+    @Test
+    public void captureStonesOtherPlayerCheckIfOtherBoxIsEmpty(){
+        RegularBox box = new RegularBox(4, 14);
+        box.playBox(6);
+        box.playBox(13);
+        box.playBox(1);
+        Assert.assertEquals(0,box.getStoneAmountNextBox(7));
+    }
+
+    @Test
+    public void captureStonesOtherPlayerCheckIfOtherBoxIsEmpty2(){
+        RegularBox box = new RegularBox(4, 14);
+        box.playBox(5);
+        box.playBox(8);
+        box.playBox(1);
+        Assert.assertEquals(0,box.getStoneAmountNextBox(8));
+    }
+
+    @Test
+    public void doNotCaptureStonesOtherPlayer(){
+        RegularBox box = new RegularBox(4, 14);
+        box.playBox(6);
+        box.playBox(8);
+        box.playBox(2);
+        Assert.assertEquals(1,box.getStoneAmountNextBox(5));
+    }
+
+    @Test
+    public void checkIfGameIsEnded(){
+        RegularBox box = new RegularBox(4, 14);
+        Assert.assertEquals(true,box.player.canPlay());
+    }
+
+    @Test
+    public void checkIfGameIsEnded2(){
+        RegularBox box = new RegularBox(0, 14);
+        Assert.assertEquals(false,box.player.canPlay());
+    }
+
+    @Test
+    public void checkIfGameIsEnded3(){
+        RegularBox box = new RegularBox(0, 14);
+        box.addStones(1);
+        Assert.assertEquals(false,box.player.canPlay());
+    }
+
+    @Test
+    public void checkIfGameIsEnded4(){
+        RegularBox box = new RegularBox(0, 14);
+        box.nextBox.nextBox.nextBox.nextBox.nextBox.addStones(2);
+        box.playBox(6);
+        Assert.assertEquals(false,box.player.canPlay());
+    }
+
+    @Test
+    public void checkIfScoreIsGiven(){
+        RegularBox box = new RegularBox(0, 14);
+        box.nextBox.nextBox.nextBox.nextBox.nextBox.addStones(1);
+        box.playBox(6);
+        int score[] = box.player.getScore();
+        Assert.assertEquals(47, score[1]);
+    }
+
+    @Test
+    public void checkIfEmptyBoxCannotBePlayed(){
+        RegularBox box = new RegularBox(0,14);
+        box.playBox(1);
+        Assert.assertEquals(0,box.getStoneAmountNextBox());
+    }
 
     /*
      * Next tests:
-     * - hit other player
-     * - hit other player, but not if his box is empty
-     * - check-end game
      * - (make board of 12 (10, 8, 6, 4))
      */
 }

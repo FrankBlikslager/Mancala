@@ -49,4 +49,29 @@ public class Player {
     public void setKalaha(Kalaha kalaha) {
         this.kalaha = kalaha;
     }
+
+    public boolean canPlay() {
+        boolean canPlay = firstBox.allNotEmpty();
+        canPlay = opponent.canPlay(canPlay);
+        return canPlay;
+    }
+    public boolean canPlay(boolean canPlay){
+        if(canPlay){
+            canPlay = firstBox.allNotEmpty();
+        }
+        return canPlay;
+    }
+
+    public int[] getScore(){
+        int[] score = new int[2];
+        if(!canPlay(false)){
+            score[0] = kalaha.getStoneAmount();
+            score[1] = 48-score[0];
+        }
+        else if(!opponent.canPlay(false)){
+            score[1] = kalaha.getStoneAmount();
+            score[0] = 48-score[1];
+        }
+        return score;
+    }
 }

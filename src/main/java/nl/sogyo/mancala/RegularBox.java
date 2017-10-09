@@ -4,14 +4,9 @@ public class RegularBox extends Box{
 
     // constructors
     public RegularBox(){}
-    public RegularBox(int amountOfBoxes){
-        amountOfBoxes--;
-        if(amountOfBoxes>0) {
-            nextBox = new RegularBox(amountOfBoxes);
-        }
-    }
     public RegularBox(int amountOfStones, int amountOfBoxes){
-        this.player = new Player(this);
+        Player player = new Player(this);
+        this.player = player;
         stones = amountOfStones;
         int boxesLeftToInitialize = amountOfBoxes-1;
         if(boxesLeftToInitialize>0) {
@@ -49,8 +44,10 @@ public class RegularBox extends Box{
     public void playBox(int boxNumber) {
         int boxesToMove = boxNumber-1;
         if (boxesToMove==0 && this.player.getIsActivePlayer()){
-            this.moveStones();
-            this.player.changePlayer();
+            if(this.getStoneAmount() != 0) {
+                this.moveStones();
+                this.player.changePlayer();
+            }
         }
         else if(boxesToMove==0 && !this.player.getIsActivePlayer()){
             // do nothing
@@ -69,9 +66,72 @@ public class RegularBox extends Box{
     }
 
     public void captureStones() {
-        int stonesToKalaha = stones;
-        stones = 0;
-        player.getKalaha().addStones(stonesToKalaha);
+        int numberOfBoxesAway = getOpposingBox();
+        if(getStoneAmountNextBox(numberOfBoxesAway)!=0) {
+            int stonesToKalaha = stones;
+            stones = 0;
+            stonesToKalaha = stonesToKalaha + countToKalaha();
+            player.getKalaha().addStones(stonesToKalaha);
+        }
+    }
 
+    public int countToKalaha(){
+        int counter = 0;
+        int stonesToKalaha = countToKalaha(counter);
+        return stonesToKalaha;
+    }
+    public int countToKalaha(int counter){
+        counter++;
+        int stonesToKalaha;
+        if(nextBox instanceof RegularBox) {
+            stonesToKalaha= ((RegularBox) nextBox).countToKalaha(counter);
+        }
+        else{
+            stonesToKalaha = ((RegularBox) nextBox.nextBox).countFromKalaha(counter);
+        }
+        return stonesToKalaha;
+    }
+
+    public int countFromKalaha(int counter){
+        counter--;
+        int stonesToKalaha;
+        if(counter == 0){
+            stonesToKalaha = getStoneAmount();
+            stones = 0;
+        }
+        else{
+            stonesToKalaha = ((RegularBox) nextBox).countFromKalaha(counter);
+        }
+        return stonesToKalaha;
+    }
+
+    public int getOpposingBox(){
+        int counter = 0;
+        counter = getOpposingBox(counter);
+        return counter;
+    }
+    public int getOpposingBox(int counter){
+        counter++;
+        if(nextBox instanceof Kalaha){
+            counter = counter*2;
+        }
+        else{
+            counter = ((RegularBox) nextBox).getOpposingBox(counter);
+        }
+        return counter;
+    }
+
+    public boolean allNotEmpty() {
+        if (getStoneAmount()!=0){
+            return true;
+        }
+        else{
+            if(nextBox instanceof Kalaha){
+                return false;
+            }
+            else{
+                return ((RegularBox) nextBox).allNotEmpty();
+            }
+        }
     }
 }
