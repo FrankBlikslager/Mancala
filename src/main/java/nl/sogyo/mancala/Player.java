@@ -11,13 +11,13 @@ public class Player {
         this.opponent = new Player(this);
         isActivePlayer = true;
     }
-    public Player(Player opponent){
+   private Player(Player opponent){
         this.opponent = opponent;
         isActivePlayer = false;
     }
 
     // methods
-    public Player changePlayer(){
+    protected Player changePlayer(){
         if(isActivePlayer) {
             isActivePlayer = false;
             opponent.isActivePlayer = true;
@@ -38,7 +38,7 @@ public class Player {
         return firstBox;
     }
 
-    public void setFirstBox(RegularBox firstBox) {
+    protected void setFirstBox(RegularBox firstBox) {
         this.firstBox = firstBox;
     }
 
@@ -46,20 +46,8 @@ public class Player {
         return kalaha;
     }
 
-    public void setKalaha(Kalaha kalaha) {
+    protected void setKalaha(Kalaha kalaha) {
         this.kalaha = kalaha;
-    }
-
-    public boolean canPlay() {
-        boolean canPlay = firstBox.allNotEmpty();
-        canPlay = opponent.canPlay(canPlay);
-        return canPlay;
-    }
-    public boolean canPlay(boolean canPlay){
-        if(canPlay){
-            canPlay = firstBox.allNotEmpty();
-        }
-        return canPlay;
     }
 
     public int[] getScore(){
@@ -74,4 +62,18 @@ public class Player {
         }
         return score;
     }
+
+    public boolean canPlay() {
+        boolean canPlay = firstBox.allNotEmpty();
+        canPlay = opponent.canPlay(canPlay);
+        return canPlay;
+    }
+    private boolean canPlay(boolean canPlay){
+        if(canPlay){
+            canPlay = firstBox.allNotEmpty();
+        }
+        return canPlay;
+    }
+
+
 }

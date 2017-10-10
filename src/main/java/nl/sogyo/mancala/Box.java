@@ -6,28 +6,41 @@ public abstract class Box {
     Player player;
 
     // methods
-    public void moveStones(int stonesToDistribute){
+    protected void distributeStones(int stonesToDistribute){
         if(this instanceof Kalaha && !this.player.getIsActivePlayer()) { // if player!=opponent
-            nextBox.moveStones(stonesToDistribute);
+            nextBox.distributeStones(stonesToDistribute);
         }
         else{
-            stones++;
+            addStones(1);
             stonesToDistribute--;
-            if (stonesToDistribute > 0) {
-                nextBox.moveStones(stonesToDistribute);
-            }
-            else if(this instanceof Kalaha && this.player.getIsActivePlayer()){
-                this.player.changePlayer();
-            }
-            else if(this.player.getIsActivePlayer() && this.getStoneAmount()==1){
-                ((RegularBox) this).captureStones();
-                // move stones to kalaha active player
-            }
+            actionAfterDistribution(stonesToDistribute);
+        }
+    }
+
+    private void actionAfterDistribution(int stonesToDistribute) {
+        if (stonesToDistribute > 0) {
+            nextBox.distributeStones(stonesToDistribute);
+        }
+        else if(this instanceof Kalaha){
+            // player has another turn
+        }
+        else if(this.player.getIsActivePlayer() && this.getStoneAmount()==1){
+            ((RegularBox) this).captureStones();
+            this.player.changePlayer();
+        }
+        else{
+            this.player.changePlayer();
         }
     }
 
     public int getStoneAmount() {
         return stones;
+    }
+    public void addStones(int stonesToAdd){
+        this.stones += stonesToAdd;
+    }
+    public void removeStones(){
+        stones = 0;
     }
 
     public int getStoneAmountNextBox() {
@@ -42,9 +55,5 @@ public abstract class Box {
         else {
             return nextBox.getStoneAmountNextBox(--numberOfBoxesAway);
         }
-    }
-
-    public void addStones(int stonesToAdd) {
-        stones = stones + stonesToAdd;
     }
 }

@@ -224,8 +224,4 @@ public class MancalaTest {
         Assert.assertEquals(0,box.getStoneAmountNextBox());
     }
 
-    /*
-     * Next tests:
-     * - (make board of 12 (10, 8, 6, 4))
-     */
 }
