@@ -17,16 +17,14 @@ public class Player {
     }
 
     // methods
-    protected Player changePlayer(){
+    protected void changePlayer(){
         if(isActivePlayer) {
             isActivePlayer = false;
             opponent.isActivePlayer = true;
-            return opponent;
         }
         else{
             isActivePlayer = true;
             opponent.isActivePlayer = false;
-            return this;
         }
     }
 
@@ -73,6 +71,10 @@ public class Player {
             canPlay = firstBox.allNotEmpty();
         }
         return canPlay;
+    }
+
+    protected Player getOpponent(){
+        return opponent;
     }
 
 

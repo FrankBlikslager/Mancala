@@ -1,0 +1,723 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="0.9539473684210527" branch-rate="0.90625" lines-covered="145" lines-valid="152" branches-covered="58" branches-valid="64" complexity="2.0285714285714285" version="2.1.1" timestamp="1508326952417">
+	<sources>
+		<source>--source</source>
+		<source>C:/Users/fblikslager/Documents/week5-6/mancala/src/main/java</source>
+	</sources>
+	<packages>
+		<package name="nl.sogyo.mancala" line-rate="0.9539473684210527" branch-rate="0.90625" complexity="2.0285714285714285">
+			<classes>
+				<class name="nl.sogyo.mancala.Box" filename="nl/sogyo/mancala/Box.java" line-rate="0.9615384615384616" branch-rate="0.9375" complexity="2.4285714285714284">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="3" hits="909" branch="false"/>
+							</lines>
+						</method>
+						<method name="actionAfterDistribution" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="21" hits="384" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="22" hits="291" branch="false"/>
+								<line number="24" hits="93" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="27" hits="87" branch="true" condition-coverage="100% (4/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="28" hits="15" branch="false"/>
+								<line number="29" hits="15" branch="false"/>
+								<line number="32" hits="72" branch="false"/>
+								<line number="34" hits="384" branch="false"/>
+							</lines>
+						</method>
+						<method name="addStones" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="40" hits="405" branch="false"/>
+								<line number="41" hits="405" branch="false"/>
+							</lines>
+						</method>
+						<method name="distributeStones" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="10" hits="390" branch="true" condition-coverage="100% (4/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="11" hits="6" branch="false"/>
+								<line number="14" hits="384" branch="false"/>
+								<line number="15" hits="384" branch="false"/>
+								<line number="16" hits="384" branch="false"/>
+								<line number="18" hits="390" branch="false"/>
+							</lines>
+						</method>
+						<method name="getStoneAmount" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="37" hits="303" branch="false"/>
+							</lines>
+						</method>
+						<method name="getStoneAmountNextBox" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="47" hits="15" branch="false"/>
+							</lines>
+						</method>
+						<method name="getStoneAmountNextBox" signature="(I)I" line-rate="0.8" branch-rate="0.75" complexity="0">
+							<lines>
+								<line number="50" hits="327" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="51" hits="0" branch="false"/>
+								<line number="52" hits="327" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="53" hits="60" branch="false"/>
+								<line number="56" hits="267" branch="false"/>
+							</lines>
+						</method>
+						<method name="removeStones" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="43" hits="24" branch="false"/>
+								<line number="44" hits="24" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="3" hits="909" branch="false"/>
+						<line number="10" hits="390" branch="true" condition-coverage="100% (4/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="11" hits="6" branch="false"/>
+						<line number="14" hits="384" branch="false"/>
+						<line number="15" hits="384" branch="false"/>
+						<line number="16" hits="384" branch="false"/>
+						<line number="18" hits="390" branch="false"/>
+						<line number="21" hits="384" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="22" hits="291" branch="false"/>
+						<line number="24" hits="93" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="27" hits="87" branch="true" condition-coverage="100% (4/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="28" hits="15" branch="false"/>
+						<line number="29" hits="15" branch="false"/>
+						<line number="32" hits="72" branch="false"/>
+						<line number="34" hits="384" branch="false"/>
+						<line number="37" hits="303" branch="false"/>
+						<line number="40" hits="405" branch="false"/>
+						<line number="41" hits="405" branch="false"/>
+						<line number="43" hits="24" branch="false"/>
+						<line number="44" hits="24" branch="false"/>
+						<line number="47" hits="15" branch="false"/>
+						<line number="50" hits="327" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="51" hits="0" branch="false"/>
+						<line number="52" hits="327" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="53" hits="60" branch="false"/>
+						<line number="56" hits="267" branch="false"/>
+					</lines>
+				</class>
+				<class name="nl.sogyo.mancala.Kalaha" filename="nl/sogyo/mancala/Kalaha.java" line-rate="1.0" branch-rate="1.0" complexity="2.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(IIILnl/sogyo/mancala/RegularBox;Lnl/sogyo/mancala/Player;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="4" hits="120" branch="false"/>
+								<line number="5" hits="120" branch="false"/>
+								<line number="6" hits="120" branch="false"/>
+								<line number="7" hits="120" branch="false"/>
+								<line number="8" hits="120" branch="false"/>
+								<line number="9" hits="120" branch="false"/>
+								<line number="10" hits="120" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="11" hits="60" branch="false"/>
+								<line number="14" hits="60" branch="false"/>
+								<line number="16" hits="120" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="4" hits="120" branch="false"/>
+						<line number="5" hits="120" branch="false"/>
+						<line number="6" hits="120" branch="false"/>
+						<line number="7" hits="120" branch="false"/>
+						<line number="8" hits="120" branch="false"/>
+						<line number="9" hits="120" branch="false"/>
+						<line number="10" hits="120" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="11" hits="60" branch="false"/>
+						<line number="14" hits="60" branch="false"/>
+						<line number="16" hits="120" branch="false"/>
+					</lines>
+				</class>
+				<class name="nl.sogyo.mancala.Mancala" filename="nl/sogyo/mancala/Mancala.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="3" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="6" hits="0" branch="false"/>
+								<line number="7" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="3" hits="0" branch="false"/>
+						<line number="6" hits="0" branch="false"/>
+						<line number="7" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="nl.sogyo.mancala.Player" filename="nl/sogyo/mancala/Player.java" line-rate="0.918918918918919" branch-rate="0.625" complexity="1.3333333333333333">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lnl/sogyo/mancala/Player;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="78" branch="false"/>
+								<line number="15" hits="78" branch="false"/>
+								<line number="16" hits="78" branch="false"/>
+								<line number="17" hits="78" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Lnl/sogyo/mancala/RegularBox;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="9" hits="78" branch="false"/>
+								<line number="10" hits="78" branch="false"/>
+								<line number="11" hits="78" branch="false"/>
+								<line number="12" hits="78" branch="false"/>
+								<line number="13" hits="78" branch="false"/>
+							</lines>
+						</method>
+						<method name="canPlay" signature="()Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="65" hits="12" branch="false"/>
+								<line number="66" hits="12" branch="false"/>
+								<line number="67" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="canPlay" signature="(Z)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="70" hits="15" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="71" hits="6" branch="false"/>
+								<line number="73" hits="15" branch="false"/>
+							</lines>
+						</method>
+						<method name="changePlayer" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="21" hits="87" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="22" hits="48" branch="false"/>
+								<line number="23" hits="48" branch="false"/>
+								<line number="26" hits="39" branch="false"/>
+								<line number="27" hits="39" branch="false"/>
+								<line number="29" hits="87" branch="false"/>
+							</lines>
+						</method>
+						<method name="getFirstBox" signature="()Lnl/sogyo/mancala/RegularBox;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="36" hits="708" branch="false"/>
+							</lines>
+						</method>
+						<method name="getIsActivePlayer" signature="()Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="32" hits="231" branch="false"/>
+							</lines>
+						</method>
+						<method name="getKalaha" signature="()Lnl/sogyo/mancala/Kalaha;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="44" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="getOpponent" signature="()Lnl/sogyo/mancala/Player;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="77" hits="120" branch="false"/>
+							</lines>
+						</method>
+						<method name="getScore" signature="()[I" line-rate="0.625" branch-rate="0.25" complexity="0">
+							<lines>
+								<line number="52" hits="3" branch="false"/>
+								<line number="53" hits="3" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="54" hits="3" branch="false"/>
+								<line number="55" hits="3" branch="false"/>
+								<line number="57" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="58" hits="0" branch="false"/>
+								<line number="59" hits="0" branch="false"/>
+								<line number="61" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="setFirstBox" signature="(Lnl/sogyo/mancala/RegularBox;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="40" hits="60" branch="false"/>
+								<line number="41" hits="60" branch="false"/>
+							</lines>
+						</method>
+						<method name="setKalaha" signature="(Lnl/sogyo/mancala/Kalaha;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="48" hits="120" branch="false"/>
+								<line number="49" hits="120" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="9" hits="78" branch="false"/>
+						<line number="10" hits="78" branch="false"/>
+						<line number="11" hits="78" branch="false"/>
+						<line number="12" hits="78" branch="false"/>
+						<line number="13" hits="78" branch="false"/>
+						<line number="14" hits="78" branch="false"/>
+						<line number="15" hits="78" branch="false"/>
+						<line number="16" hits="78" branch="false"/>
+						<line number="17" hits="78" branch="false"/>
+						<line number="21" hits="87" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="22" hits="48" branch="false"/>
+						<line number="23" hits="48" branch="false"/>
+						<line number="26" hits="39" branch="false"/>
+						<line number="27" hits="39" branch="false"/>
+						<line number="29" hits="87" branch="false"/>
+						<line number="32" hits="231" branch="false"/>
+						<line number="36" hits="708" branch="false"/>
+						<line number="40" hits="60" branch="false"/>
+						<line number="41" hits="60" branch="false"/>
+						<line number="44" hits="12" branch="false"/>
+						<line number="48" hits="120" branch="false"/>
+						<line number="49" hits="120" branch="false"/>
+						<line number="52" hits="3" branch="false"/>
+						<line number="53" hits="3" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="54" hits="3" branch="false"/>
+						<line number="55" hits="3" branch="false"/>
+						<line number="57" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="58" hits="0" branch="false"/>
+						<line number="59" hits="0" branch="false"/>
+						<line number="61" hits="3" branch="false"/>
+						<line number="65" hits="12" branch="false"/>
+						<line number="66" hits="12" branch="false"/>
+						<line number="67" hits="12" branch="false"/>
+						<line number="70" hits="15" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="71" hits="6" branch="false"/>
+						<line number="73" hits="15" branch="false"/>
+						<line number="77" hits="120" branch="false"/>
+					</lines>
+				</class>
+				<class name="nl.sogyo.mancala.RegularBox" filename="nl/sogyo/mancala/RegularBox.java" line-rate="1.0" branch-rate="0.9473684210526315" complexity="2.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="6" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(II)V" line-rate="1.0" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="7" hits="78" branch="false"/>
+								<line number="8" hits="78" branch="false"/>
+								<line number="9" hits="78" branch="false"/>
+								<line number="10" hits="78" branch="false"/>
+								<line number="11" hits="78" branch="false"/>
+								<line number="12" hits="78" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="13" hits="78" branch="false"/>
+								<line number="14" hits="78" branch="false"/>
+								<line number="16" hits="78" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(IIILnl/sogyo/mancala/RegularBox;Lnl/sogyo/mancala/Player;)V" line-rate="1.0" branch-rate="0.9166666666666666" complexity="0">
+							<lines>
+								<line number="17" hits="708" branch="false"/>
+								<line number="18" hits="708" branch="false"/>
+								<line number="19" hits="708" branch="false"/>
+								<line number="20" hits="708" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="21" hits="60" branch="false"/>
+								<line number="23" hits="708" branch="false"/>
+								<line number="24" hits="708" branch="true" condition-coverage="100% (6/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+										<condition number="2" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="25" hits="120" branch="false"/>
+								<line number="27" hits="588" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="28" hits="570" branch="false"/>
+								<line number="30" hits="18" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="31" hits="18" branch="false"/>
+								<line number="33" hits="708" branch="false"/>
+							</lines>
+						</method>
+						<method name="allNotEmpty" signature="()Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="128" hits="63" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="129" hits="9" branch="false"/>
+								<line number="131" hits="54" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="132" hits="9" branch="false"/>
+								<line number="135" hits="45" branch="false"/>
+							</lines>
+						</method>
+						<method name="captureStones" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="71" hits="15" branch="false"/>
+								<line number="72" hits="15" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="73" hits="12" branch="false"/>
+								<line number="74" hits="12" branch="false"/>
+								<line number="75" hits="12" branch="false"/>
+								<line number="76" hits="12" branch="false"/>
+								<line number="78" hits="15" branch="false"/>
+							</lines>
+						</method>
+						<method name="countFromKalaha" signature="(I)I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="115" hits="15" branch="false"/>
+								<line number="117" hits="15" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="118" hits="12" branch="false"/>
+								<line number="119" hits="12" branch="false"/>
+								<line number="122" hits="3" branch="false"/>
+								<line number="124" hits="15" branch="false"/>
+							</lines>
+						</method>
+						<method name="countToKalaha" signature="(I)I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="103" hits="15" branch="false"/>
+								<line number="105" hits="15" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="106" hits="3" branch="false"/>
+								<line number="109" hits="12" branch="false"/>
+								<line number="111" hits="15" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCapturedStones" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="97" hits="12" branch="false"/>
+								<line number="98" hits="12" branch="false"/>
+								<line number="99" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="getDistanceToOpposingBox" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="81" hits="15" branch="false"/>
+								<line number="82" hits="15" branch="false"/>
+								<line number="83" hits="15" branch="false"/>
+							</lines>
+						</method>
+						<method name="getOpposingBox" signature="(I)I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="86" hits="18" branch="false"/>
+								<line number="87" hits="18" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="88" hits="15" branch="false"/>
+								<line number="91" hits="3" branch="false"/>
+								<line number="93" hits="18" branch="false"/>
+							</lines>
+						</method>
+						<method name="moveStones" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="37" hits="96" branch="false"/>
+								<line number="38" hits="96" branch="false"/>
+								<line number="39" hits="96" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="40" hits="93" branch="false"/>
+								<line number="42" hits="96" branch="false"/>
+							</lines>
+						</method>
+						<method name="playBox" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="45" hits="507" branch="false"/>
+								<line number="46" hits="507" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="47" hits="87" branch="false"/>
+								<line number="50" hits="420" branch="false"/>
+								<line number="52" hits="507" branch="false"/>
+							</lines>
+						</method>
+						<method name="playCurrentBox" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="55" hits="87" branch="true" condition-coverage="100% (4/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="56" hits="78" branch="false"/>
+								<line number="58" hits="87" branch="false"/>
+							</lines>
+						</method>
+						<method name="playOtherBox" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="61" hits="420" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="62" hits="390" branch="false"/>
+								<line number="64" hits="30" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="65" hits="24" branch="false"/>
+								<line number="66" hits="24" branch="false"/>
+								<line number="68" hits="420" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="6" hits="3" branch="false"/>
+						<line number="7" hits="78" branch="false"/>
+						<line number="8" hits="78" branch="false"/>
+						<line number="9" hits="78" branch="false"/>
+						<line number="10" hits="78" branch="false"/>
+						<line number="11" hits="78" branch="false"/>
+						<line number="12" hits="78" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="13" hits="78" branch="false"/>
+						<line number="14" hits="78" branch="false"/>
+						<line number="16" hits="78" branch="false"/>
+						<line number="17" hits="708" branch="false"/>
+						<line number="18" hits="708" branch="false"/>
+						<line number="19" hits="708" branch="false"/>
+						<line number="20" hits="708" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="21" hits="60" branch="false"/>
+						<line number="23" hits="708" branch="false"/>
+						<line number="24" hits="708" branch="true" condition-coverage="100% (6/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+								<condition number="2" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="25" hits="120" branch="false"/>
+						<line number="27" hits="588" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="28" hits="570" branch="false"/>
+						<line number="30" hits="18" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="31" hits="18" branch="false"/>
+						<line number="33" hits="708" branch="false"/>
+						<line number="37" hits="96" branch="false"/>
+						<line number="38" hits="96" branch="false"/>
+						<line number="39" hits="96" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="40" hits="93" branch="false"/>
+						<line number="42" hits="96" branch="false"/>
+						<line number="45" hits="507" branch="false"/>
+						<line number="46" hits="507" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="47" hits="87" branch="false"/>
+						<line number="50" hits="420" branch="false"/>
+						<line number="52" hits="507" branch="false"/>
+						<line number="55" hits="87" branch="true" condition-coverage="100% (4/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="56" hits="78" branch="false"/>
+						<line number="58" hits="87" branch="false"/>
+						<line number="61" hits="420" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="62" hits="390" branch="false"/>
+						<line number="64" hits="30" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="65" hits="24" branch="false"/>
+						<line number="66" hits="24" branch="false"/>
+						<line number="68" hits="420" branch="false"/>
+						<line number="71" hits="15" branch="false"/>
+						<line number="72" hits="15" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="73" hits="12" branch="false"/>
+						<line number="74" hits="12" branch="false"/>
+						<line number="75" hits="12" branch="false"/>
+						<line number="76" hits="12" branch="false"/>
+						<line number="78" hits="15" branch="false"/>
+						<line number="81" hits="15" branch="false"/>
+						<line number="82" hits="15" branch="false"/>
+						<line number="83" hits="15" branch="false"/>
+						<line number="86" hits="18" branch="false"/>
+						<line number="87" hits="18" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="88" hits="15" branch="false"/>
+						<line number="91" hits="3" branch="false"/>
+						<line number="93" hits="18" branch="false"/>
+						<line number="97" hits="12" branch="false"/>
+						<line number="98" hits="12" branch="false"/>
+						<line number="99" hits="12" branch="false"/>
+						<line number="103" hits="15" branch="false"/>
+						<line number="105" hits="15" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="106" hits="3" branch="false"/>
+						<line number="109" hits="12" branch="false"/>
+						<line number="111" hits="15" branch="false"/>
+						<line number="115" hits="15" branch="false"/>
+						<line number="117" hits="15" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="118" hits="12" branch="false"/>
+						<line number="119" hits="12" branch="false"/>
+						<line number="122" hits="3" branch="false"/>
+						<line number="124" hits="15" branch="false"/>
+						<line number="128" hits="63" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="129" hits="9" branch="false"/>
+						<line number="131" hits="54" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="132" hits="9" branch="false"/>
+						<line number="135" hits="45" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>
